@@ -71,16 +71,3 @@ class RefineCalculator:
                     self.RefineWeapon(e, upgradeRate, isVIP)
                 elif e.Type == "Armor":
                     self.RefineArmor(e, upgradeRate, isVIP)
-
-def main():
-    listItem = []
-    listItem.append(Equipment(0, "Weapon", 5))
-    listItem.append(Equipment(2, "Armor", 9))
-    listItem.append(Equipment(5, "Weapon", 10))
-    upgradeItem = RefineCalculator()
-    upgradeItem.RefineEquipments(listItem, True)
-    for e in listItem:
-        print(e.Type ," level: " ,e.ItemLevel ," refine: " ,e.RefineLevel)
-
-if __name__ == "__main__":
-    main()
